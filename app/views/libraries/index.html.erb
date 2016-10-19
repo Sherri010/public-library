@@ -1,0 +1,8 @@
+<p><%= @libraries.count %> are available </p>
+
+<% @libraries.each do |l| %>
+  <div>
+    <h3> <%= l.name %></h3>
+   </div>
+   <br>
+   <% end %>
