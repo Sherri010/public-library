@@ -1,0 +1,12 @@
+ <%= form_for @library do |l| %>
+ <div>
+  <%= l.text_field :name, placeholder:"Name" %>
+</div>
+<div>
+<%= l.number_field :floor_count, placeholder: "floor count" %>
+</div>
+<div>
+<%= l.number_field :floor_area, placeholder: "Floor Area" %>
+</div>
+<%= l.submit %>
+<% end %>
