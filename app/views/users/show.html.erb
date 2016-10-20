@@ -1,3 +1,4 @@
 <div>
  <p> Welcome <%= @user.first_name %> </p>
+ <%= link_to "Your Libraries", user_libraries_path(@user.id) %>
  </div>

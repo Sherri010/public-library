@@ -1,0 +1,12 @@
+<div> <%= @user.first_name %> is a member of the following lobraries </div>
+
+<ul>
+  <% if @libraries.count > 0 %>
+   <% @libraries.each do |l| %>
+   <li><%= l.name %></li>
+  <% end %>
+  <% else %>
+   <%= "No memberships yet" %> <br>
+   <%= link_to "Add membership" , libraries_path %>
+ <% end %>
+</ul>

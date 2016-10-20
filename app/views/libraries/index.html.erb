@@ -1,8 +1,9 @@
-<p><%= @libraries.count %> are available </p>
-
-<% @libraries.each do |l| %>
+<% @libraries.each do |library| %>
   <div>
-    <h3> <%= l.name %></h3>
-   </div>
-   <br>
-   <% end %>
+    <h3><%= library.name %> - <%= link_to "homepage", library %></h3>
+    <% if current_user %>
+      <%= button_to "Join", library_users_path(library) %>
+    <% end %>
+  </div>
+  <br>
+<% end %>
